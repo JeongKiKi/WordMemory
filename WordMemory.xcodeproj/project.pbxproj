@@ -9,18 +9,19 @@
 /* Begin PBXBuildFile section */
 		68F8FC1D2BC5190E007B3191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC1C2BC5190E007B3191 /* AppDelegate.swift */; };
 		68F8FC1F2BC5190E007B3191 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC1E2BC5190E007B3191 /* SceneDelegate.swift */; };
-		68F8FC212BC5190E007B3191 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC202BC5190E007B3191 /* MainController.swift */; };
+		68F8FC212BC5190E007B3191 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC202BC5190E007B3191 /* MainViewController.swift */; };
 		68F8FC242BC5190E007B3191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F8FC222BC5190E007B3191 /* Main.storyboard */; };
 		68F8FC262BC5190F007B3191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68F8FC252BC5190F007B3191 /* Assets.xcassets */; };
 		68F8FC292BC5190F007B3191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F8FC272BC5190F007B3191 /* LaunchScreen.storyboard */; };
 		68F8FC312BC65688007B3191 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC302BC65688007B3191 /* MainView.swift */; };
+		68F8FC352BC6BA10007B3191 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 68F8FC342BC6BA10007B3191 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		68F8FC192BC5190D007B3191 /* WordMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F8FC1C2BC5190E007B3191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68F8FC1E2BC5190E007B3191 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		68F8FC202BC5190E007B3191 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		68F8FC202BC5190E007B3191 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		68F8FC232BC5190E007B3191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		68F8FC252BC5190F007B3191 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68F8FC282BC5190F007B3191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F8FC352BC6BA10007B3191 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +74,7 @@
 		68F8FC322BC65697007B3191 /* MainPage */ = {
 			isa = PBXGroup;
 			children = (
-				68F8FC202BC5190E007B3191 /* MainController.swift */,
+				68F8FC202BC5190E007B3191 /* MainViewController.swift */,
 				68F8FC302BC65688007B3191 /* MainView.swift */,
 			);
 			path = MainPage;
@@ -94,6 +96,9 @@
 			dependencies = (
 			);
 			name = WordMemory;
+			packageProductDependencies = (
+				68F8FC342BC6BA10007B3191 /* SnapKit */,
+			);
 			productName = WordMemory;
 			productReference = 68F8FC192BC5190D007B3191 /* WordMemory.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +127,9 @@
 				Base,
 			);
 			mainGroup = 68F8FC102BC5190D007B3191;
+			packageReferences = (
+				68F8FC332BC6BA10007B3191 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 68F8FC1A2BC5190D007B3191 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,7 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68F8FC212BC5190E007B3191 /* MainController.swift in Sources */,
+				68F8FC212BC5190E007B3191 /* MainViewController.swift in Sources */,
 				68F8FC312BC65688007B3191 /* MainView.swift in Sources */,
 				68F8FC1D2BC5190E007B3191 /* AppDelegate.swift in Sources */,
 				68F8FC1F2BC5190E007B3191 /* SceneDelegate.swift in Sources */,
@@ -368,6 +376,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		68F8FC332BC6BA10007B3191 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		68F8FC342BC6BA10007B3191 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68F8FC332BC6BA10007B3191 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 68F8FC112BC5190D007B3191 /* Project object */;
 }
