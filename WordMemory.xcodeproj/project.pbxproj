@@ -15,6 +15,8 @@
 		68F8FC292BC5190F007B3191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68F8FC272BC5190F007B3191 /* LaunchScreen.storyboard */; };
 		68F8FC312BC65688007B3191 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC302BC65688007B3191 /* MainView.swift */; };
 		68F8FC352BC6BA10007B3191 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 68F8FC342BC6BA10007B3191 /* SnapKit */; };
+		68F8FC392BC70BF1007B3191 /* MemoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC382BC70BF1007B3191 /* MemoryListViewController.swift */; };
+		68F8FC3B2BC70C06007B3191 /* MemoryTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC3A2BC70C06007B3191 /* MemoryTestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		68F8FC282BC5190F007B3191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68F8FC2A2BC5190F007B3191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68F8FC302BC65688007B3191 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		68F8FC382BC70BF1007B3191 /* MemoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryListViewController.swift; sourceTree = "<group>"; };
+		68F8FC3A2BC70C06007B3191 /* MemoryTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryTestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				68F8FC1C2BC5190E007B3191 /* AppDelegate.swift */,
 				68F8FC1E2BC5190E007B3191 /* SceneDelegate.swift */,
 				68F8FC322BC65697007B3191 /* MainPage */,
+				68F8FC3A2BC70C06007B3191 /* MemoryTestViewController.swift */,
+				68F8FC382BC70BF1007B3191 /* MemoryListViewController.swift */,
 				68F8FC222BC5190E007B3191 /* Main.storyboard */,
 				68F8FC252BC5190F007B3191 /* Assets.xcassets */,
 				68F8FC272BC5190F007B3191 /* LaunchScreen.storyboard */,
@@ -158,7 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				68F8FC212BC5190E007B3191 /* MainViewController.swift in Sources */,
+				68F8FC392BC70BF1007B3191 /* MemoryListViewController.swift in Sources */,
 				68F8FC312BC65688007B3191 /* MainView.swift in Sources */,
+				68F8FC3B2BC70C06007B3191 /* MemoryTestViewController.swift in Sources */,
 				68F8FC1D2BC5190E007B3191 /* AppDelegate.swift in Sources */,
 				68F8FC1F2BC5190E007B3191 /* SceneDelegate.swift in Sources */,
 			);
