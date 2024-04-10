@@ -8,12 +8,19 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    let mainView = MainView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
     }
 
+    override func loadView() {
+        super.loadView()
+        view.addSubview(mainView)
 
+        mainView.snp.makeConstraints {
+            $0.top.equalTo(self.view)
+            $0.leading.bottom.trailing.equalToSuperview()
+        }
+    }
 }
-
