@@ -18,6 +18,7 @@
 		68F8FC392BC70BF1007B3191 /* MemoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC382BC70BF1007B3191 /* MemoryListViewController.swift */; };
 		68F8FC3B2BC70C06007B3191 /* MemoryTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC3A2BC70C06007B3191 /* MemoryTestViewController.swift */; };
 		68F8FC3D2BC7FC6E007B3191 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC3C2BC7FC6E007B3191 /* ListTableViewCell.swift */; };
+		68F8FC3F2BC84F39007B3191 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC3E2BC84F39007B3191 /* DummyData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		68F8FC382BC70BF1007B3191 /* MemoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryListViewController.swift; sourceTree = "<group>"; };
 		68F8FC3A2BC70C06007B3191 /* MemoryTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryTestViewController.swift; sourceTree = "<group>"; };
 		68F8FC3C2BC7FC6E007B3191 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		68F8FC3E2BC84F39007B3191 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				68F8FC3A2BC70C06007B3191 /* MemoryTestViewController.swift */,
 				68F8FC382BC70BF1007B3191 /* MemoryListViewController.swift */,
 				68F8FC3C2BC7FC6E007B3191 /* ListTableViewCell.swift */,
+				68F8FC3E2BC84F39007B3191 /* DummyData.swift */,
 				68F8FC222BC5190E007B3191 /* Main.storyboard */,
 				68F8FC252BC5190F007B3191 /* Assets.xcassets */,
 				68F8FC272BC5190F007B3191 /* LaunchScreen.storyboard */,
@@ -171,6 +174,7 @@
 				68F8FC312BC65688007B3191 /* MainView.swift in Sources */,
 				68F8FC3B2BC70C06007B3191 /* MemoryTestViewController.swift in Sources */,
 				68F8FC1D2BC5190E007B3191 /* AppDelegate.swift in Sources */,
+				68F8FC3F2BC84F39007B3191 /* DummyData.swift in Sources */,
 				68F8FC3D2BC7FC6E007B3191 /* ListTableViewCell.swift in Sources */,
 				68F8FC1F2BC5190E007B3191 /* SceneDelegate.swift in Sources */,
 			);
