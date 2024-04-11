@@ -17,6 +17,7 @@
 		68F8FC352BC6BA10007B3191 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 68F8FC342BC6BA10007B3191 /* SnapKit */; };
 		68F8FC392BC70BF1007B3191 /* MemoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC382BC70BF1007B3191 /* MemoryListViewController.swift */; };
 		68F8FC3B2BC70C06007B3191 /* MemoryTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC3A2BC70C06007B3191 /* MemoryTestViewController.swift */; };
+		68F8FC3D2BC7FC6E007B3191 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC3C2BC7FC6E007B3191 /* ListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		68F8FC302BC65688007B3191 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		68F8FC382BC70BF1007B3191 /* MemoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryListViewController.swift; sourceTree = "<group>"; };
 		68F8FC3A2BC70C06007B3191 /* MemoryTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryTestViewController.swift; sourceTree = "<group>"; };
+		68F8FC3C2BC7FC6E007B3191 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				68F8FC322BC65697007B3191 /* MainPage */,
 				68F8FC3A2BC70C06007B3191 /* MemoryTestViewController.swift */,
 				68F8FC382BC70BF1007B3191 /* MemoryListViewController.swift */,
+				68F8FC3C2BC7FC6E007B3191 /* ListTableViewCell.swift */,
 				68F8FC222BC5190E007B3191 /* Main.storyboard */,
 				68F8FC252BC5190F007B3191 /* Assets.xcassets */,
 				68F8FC272BC5190F007B3191 /* LaunchScreen.storyboard */,
@@ -168,6 +171,7 @@
 				68F8FC312BC65688007B3191 /* MainView.swift in Sources */,
 				68F8FC3B2BC70C06007B3191 /* MemoryTestViewController.swift in Sources */,
 				68F8FC1D2BC5190E007B3191 /* AppDelegate.swift in Sources */,
+				68F8FC3D2BC7FC6E007B3191 /* ListTableViewCell.swift in Sources */,
 				68F8FC1F2BC5190E007B3191 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +326,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -349,6 +354,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

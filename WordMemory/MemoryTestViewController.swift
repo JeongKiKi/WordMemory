@@ -12,6 +12,7 @@ class MemoryTestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .green
+        navigationItem.title = "시험"
     }
   
 }
