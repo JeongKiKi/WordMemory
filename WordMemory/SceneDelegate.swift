@@ -17,7 +17,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let mainVC = UINavigationController(rootViewController: MainViewController())
-        window?.rootViewController = mainVC
+        let listVC = UINavigationController(rootViewController: MemoryListViewController())
+        let testVC = UINavigationController(rootViewController: MemoryTestViewController())
+        let tabBar = UITabBarController()
+        tabBar.setViewControllers([mainVC,listVC,testVC], animated: true)
+        
+        if let item = tabBar.tabBar.items {
+            item[0].title = "검색"
+            item[1].title = "단어장"
+            item[2].title = "시험"
+        }
+        window?.rootViewController = tabBar
         window?.makeKeyAndVisible()
     }
 
