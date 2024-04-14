@@ -13,9 +13,10 @@ class MemoryListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .yellow
-        navigationItem.title = "단어장"
+
         tableView.register(ListTableViewCell.self, forCellReuseIdentifier: "ListCell")
         makeUI()
+        setupNavigationBar()
     }
 
     lazy var tableView: UITableView = {
@@ -24,6 +25,19 @@ class MemoryListViewController: UIViewController {
 
         return table
     }()
+
+    func setupNavigationBar() {
+        // 오른쪽에 플러스 버튼 추가
+        navigationItem.title = "단어장"
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
+    }
+
+    @objc func addButtonTapped() {
+        // 플러스 버튼이 탭되었을 때의 동작
+        // 여기에 새로운 항목을 추가하는 코드를 작성하세요.
+        print("+  버튼눌림")
+    }
 
     func makeUI() {
         tableView.dataSource = self
