@@ -13,7 +13,7 @@ struct Word {
 }
 
 class Dummy {
-    private let dummyData: [Word] = [
+    private var dummyData: [Word] = [
         Word(word: "Apple", meaning: "사과"),
         Word(word: "Banana", meaning: "바나나"),
         Word(word: "Cat", meaning: "고양이"),
@@ -27,5 +27,10 @@ class Dummy {
     ]
     func getDummyData() -> [Word] {
         return dummyData
+    }
+
+    func addWord(word: String, meaning: String) {
+        let newWord = Word(word: word, meaning: meaning)
+        dummyData.append(newWord)
     }
 }

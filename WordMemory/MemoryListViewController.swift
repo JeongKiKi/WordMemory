@@ -34,9 +34,33 @@ class MemoryListViewController: UIViewController {
     }
 
     @objc func addButtonTapped() {
-        // 플러스 버튼이 탭되었을 때의 동작
-        // 여기에 새로운 항목을 추가하는 코드를 작성하세요.
-        print("+  버튼눌림")
+        // alert창 찍어내기
+        let alert = UIAlertController(title: "단어 추가", message: "추가하고싶은 단어를 추가해주세요", preferredStyle: .alert)
+
+        // alert창 속 텍스트 필드 추가하기 1 (아이디 필드)
+        alert.addTextField { newWord in
+            newWord.placeholder = "영단어 입력"
+        }
+
+        // alert창 속 텍스트 필드 추가하기 2 (비밀번호 필드)
+        alert.addTextField { newMeaning in
+            newMeaning.placeholder = "의미 입력"
+        }
+
+        let okAction = UIAlertAction(title: "확인", style: .default) { _ in
+            if let addWord = alert.textFields?.first, let addMeaning = alert.textFields?.last {
+                if let addNewWord = addWord.text, let addNewMeaning = addMeaning.text {
+                    self.dummy.addWord(word: addNewWord, meaning: addNewMeaning)
+                    print(self.dummy.getDummyData())
+                }
+            }
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+
+        // 알럿창 표시
+        present(alert, animated: true, completion: nil)
     }
 
     func makeUI() {
