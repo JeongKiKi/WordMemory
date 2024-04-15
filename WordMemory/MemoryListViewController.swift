@@ -52,6 +52,7 @@ class MemoryListViewController: UIViewController {
                 if let addNewWord = addWord.text, let addNewMeaning = addMeaning.text {
                     self.dummy.addWord(word: addNewWord, meaning: addNewMeaning)
                     print(self.dummy.getDummyData())
+                    self.tableView.reloadData()
                 }
             }
         }

@@ -7,30 +7,41 @@
 
 import Foundation
 
-struct Word {
+struct Word: Codable {
     let word: String
     let meaning: String
 }
 
 class Dummy {
-    private var dummyData: [Word] = [
-        Word(word: "Apple", meaning: "사과"),
-        Word(word: "Banana", meaning: "바나나"),
-        Word(word: "Cat", meaning: "고양이"),
-        Word(word: "Dog", meaning: "개"),
-        Word(word: "Elephant", meaning: "코끼리"),
-        Word(word: "Fish", meaning: "물고기"),
-        Word(word: "Giraffe", meaning: "기린"),
-        Word(word: "Horse", meaning: "말"),
-        Word(word: "Ice cream", meaning: "아이스크림"),
-        Word(word: "Juice", meaning: "주스")
-    ]
+    private var dummyData: [Word] {
+        get {
+            guard let data = UserDefaults.standard.data(forKey: "dummyData") else { return [] }
+            do {
+                let words = try JSONDecoder().decode([Word].self, from: data)
+                return words
+            } catch {
+                print("Error decoding dummy data: \(error.localizedDescription)")
+                return []
+            }
+        }
+        set {
+            do {
+                let data = try JSONEncoder().encode(newValue)
+                UserDefaults.standard.set(data, forKey: "dummyData")
+            } catch {
+                print("Error encoding dummy data: \(error.localizedDescription)")
+            }
+        }
+    }
+
     func getDummyData() -> [Word] {
         return dummyData
     }
 
     func addWord(word: String, meaning: String) {
+        var newData = dummyData
         let newWord = Word(word: word, meaning: meaning)
-        dummyData.append(newWord)
+        newData.append(newWord)
+        dummyData = newData
     }
 }
