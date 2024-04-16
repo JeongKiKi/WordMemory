@@ -89,6 +89,7 @@ extension MemoryListViewController: UITableViewDataSource {
         let word = dummy.getDummyData()[indexPath.row]
         cell.wordLable.text = word.word
         cell.meaningLable.text = word.meaning
+        cell.selectionStyle = .none
         // 셀 설정 코드 추가
         return cell
     }
