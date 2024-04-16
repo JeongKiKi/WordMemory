@@ -52,6 +52,7 @@ class MemoryListViewController: UIViewController {
                 if let addNewWord = addWord.text, let addNewMeaning = addMeaning.text {
                     self.dummy.addWord(word: addNewWord, meaning: addNewMeaning)
                     print(self.dummy.getDummyData())
+                    self.tableView.reloadData()
                 }
             }
         }
@@ -95,7 +96,46 @@ extension MemoryListViewController: UITableViewDataSource {
 
 extension MemoryListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let todo = TodoManager.shared.todos[indexPath.row]
-//        print(todo.title)
+        // 선택된 단어 가져오기
+        let selectedWord = dummy.getDummyData()[indexPath.row]
+
+        // 알림창 생성
+        let alert = UIAlertController(title: "선택된 단어", message: "단어: \(selectedWord.word)\n의미: \(selectedWord.meaning)", preferredStyle: .alert)
+
+        // 확인 액션 추가
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+        // 업데이트 (수정)
+        let updateAction = UIAlertAction(title: "수정", style: .default) { _ in
+            let updateAlert = UIAlertController(title: "단어 추가", message: "추가하고싶은 단어를 추가해주세요", preferredStyle: .alert)
+
+            // alert창 속 텍스트 필드 추가하기 1 (아이디 필드)
+            updateAlert.addTextField { newWord in
+                newWord.text = "\(selectedWord.word)"
+            }
+
+            // alert창 속 텍스트 필드 추가하기 2 (비밀번호 필드)
+            updateAlert.addTextField { newMeaning in
+                newMeaning.text = "\(selectedWord.meaning)"
+            }
+
+            let okAction = UIAlertAction(title: "확인", style: .default) { _ in
+                if let addWord = updateAlert.textFields?.first, let addMeaning = updateAlert.textFields?.last {
+                    if let addNewWord = addWord.text, let addNewMeaning = addMeaning.text {
+                        self.dummy.updateWord(at: indexPath.row, with: addNewWord, meaning: addNewMeaning)
+                        print(self.dummy.getDummyData())
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+            updateAlert.addAction(okAction)
+            self.present(updateAlert, animated: true, completion: nil)
+        }
+        let deleteAction = UIAlertAction(title: "삭제", style: .default, handler: nil)
+        alert.addAction(okAction)
+        alert.addAction(updateAction)
+        alert.addAction(deleteAction)
+
+        // 알림창 표시
+        present(alert, animated: true, completion: nil)
     }
 }
