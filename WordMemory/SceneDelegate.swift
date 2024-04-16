@@ -17,8 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let mainVC = UINavigationController(rootViewController: MainViewController())
-        let listVC = UINavigationController(rootViewController: MemoryListViewController())
-        let testVC = UINavigationController(rootViewController: MemoryTestViewController())
+        let listVC = UINavigationController(rootViewController: ListViewController())
+        let testVC = UINavigationController(rootViewController: TestViewController())
         let tabBar = UITabBarController()
         tabBar.setViewControllers([mainVC,listVC,testVC], animated: true)
         
