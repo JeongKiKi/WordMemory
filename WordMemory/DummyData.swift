@@ -44,4 +44,13 @@ class Dummy {
         newData.append(newWord)
         dummyData = newData
     }
+    func updateWord(at index: Int, with newWord: String, meaning newMeaning: String) {
+        var newData = dummyData
+        guard index < newData.count else {
+            print("Index out of range")
+            return
+        }
+        newData[index] = Word(word: newWord, meaning: newMeaning)
+        dummyData = newData
+    }
 }
