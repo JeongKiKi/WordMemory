@@ -53,4 +53,13 @@ class Dummy {
         newData[index] = Word(word: newWord, meaning: newMeaning)
         dummyData = newData
     }
+    func deleteWord(at index: Int) {
+        var newData = dummyData
+        guard index < newData.count else {
+            print("Index out of range")
+            return
+        }
+        newData.remove(at: index)
+        dummyData = newData
+    }
 }
