@@ -127,10 +127,23 @@ extension MemoryListViewController: UITableViewDelegate {
                     }
                 }
             }
+            let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
             updateAlert.addAction(okAction)
+            updateAlert.addAction(cancelAction)
             self.present(updateAlert, animated: true, completion: nil)
         }
-        let deleteAction = UIAlertAction(title: "삭제", style: .default, handler: nil)
+        // 삭제
+        let deleteAction = UIAlertAction(title: "삭제", style: .default) { _ in
+            let deleteAlert = UIAlertController(title: "삭제", message: "단어를 삭제하시겠습니까?", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "확인", style: .default) { _ in
+                self.dummy.deleteWord(at: indexPath.row)
+                self.tableView.reloadData()
+            }
+            let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+            deleteAlert.addAction(okAction)
+            deleteAlert.addAction(cancelAction)
+            self.present(deleteAlert, animated: true, completion: nil)
+        }
         alert.addAction(okAction)
         alert.addAction(updateAction)
         alert.addAction(deleteAction)
