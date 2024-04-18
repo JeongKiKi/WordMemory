@@ -56,8 +56,11 @@ class TestBtnTappedViewController: UIViewController {
         }
 
         randomWord(selected: selectedBtn)
+        wordBtn.selectedTextField.text = ""
         wordBtn.selectedTextField.placeholder = "단어를 입력해주세요"
-        print("\(words[wordIndex].meaning) == \(wordIndex) == \(answer)")
+        // 프린트문을 위한 변환
+        let selectAnswer = (selectedBtn == "word" ? words[wordIndex].word : words[wordIndex].meaning)
+        print("\(selectAnswer) == \(wordIndex) == \(answer)")
         print(testCheck)
     }
 
@@ -78,7 +81,10 @@ class TestBtnTappedViewController: UIViewController {
     // 입력값을 확인하여 문제 답 확인
     func testCheckFunc(select: String, index: Int, answer: String) {
         if select == "word" {
-            if words[index].word == answer {
+            // 소문자 변환으로 대소문자 영향 x
+            let wordsAnswer = words[index].word.lowercased()
+            let userAnswer = answer.lowercased()
+            if wordsAnswer == userAnswer {
                 testCheck.append(true)
             } else {
                 testCheck.append(false)
