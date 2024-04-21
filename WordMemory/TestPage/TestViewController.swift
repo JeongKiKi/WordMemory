@@ -11,7 +11,6 @@ class TestViewController: UIViewController {
     let testView = TestView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
         navigationItem.title = "시험"
     }
 
