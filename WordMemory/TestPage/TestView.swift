@@ -23,14 +23,18 @@ class TestView: UIView {
     lazy var wordButton: UIButton = {
         let btn = UIButton()
         btn.setTitle("단어 맞추기", for: .normal)
-        btn.backgroundColor = .gray
+        btn.layer.cornerRadius = 5
+        btn.layer.borderWidth = 1
+        btn.setTitleColor(.black, for: .normal)
         return btn
     }()
 
     lazy var meaningButton: UIButton = {
         let btn = UIButton()
         btn.setTitle("뜻 맞추기", for: .normal)
-        btn.backgroundColor = .gray
+        btn.layer.cornerRadius = 5
+        btn.layer.borderWidth = 1
+        btn.setTitleColor(.black, for: .normal)
         return btn
     }()
 
@@ -38,7 +42,6 @@ class TestView: UIView {
         let btnStack = UIStackView(arrangedSubviews: [wordButton, meaningButton])
         btnStack.axis = .vertical
         btnStack.spacing = 10
-        btnStack.layer.borderWidth = 3
         btnStack.distribution = .equalSpacing
         btnStack.alignment = .fill
         return btnStack
