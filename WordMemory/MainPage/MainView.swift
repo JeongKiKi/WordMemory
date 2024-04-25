@@ -43,7 +43,7 @@ class MainView: UIView {
     }()
     lazy var outputWord: UILabel = {
         let lb = UILabel()
-        lb.text = "aa"
+        lb.text = "Hi"
         return lb
     }()
     lazy var outputWordView: UIView = {
