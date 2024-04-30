@@ -32,16 +32,16 @@ class TestBtnTappedViewController: UIViewController {
     // ok 버튼이 눌렸을 때 실행되는 함수
     @objc func okTapped() {
         print("단어 맞추기 버튼이 눌렸습니다.")
-//        let answerWord = words
         guard let answer = wordBtn.selectedTextField.text else { return }
         if words.count < 10 {
             if wordIndex < words.count - 1 {
                 testCheckFunc(select: selectedBtn, index: wordIndex, answer: answer)
+                print("wordIndex = \(wordIndex)")
                 wordIndex += 1
             } else {
                 print("테스트 종료")
+                testCheckFunc(select: selectedBtn, index: wordIndex, answer: answer)
                 testEndFunc(check: testCheck, answers: words)
-                wordIndex = 0
             }
 
         } else {
@@ -50,8 +50,8 @@ class TestBtnTappedViewController: UIViewController {
                 wordIndex += 1
             } else {
                 print("테스트 종료")
+                testCheckFunc(select: selectedBtn, index: wordIndex, answer: answer)
                 testEndFunc(check: testCheck, answers: words)
-                wordIndex = 0
             }
         }
 
@@ -59,8 +59,8 @@ class TestBtnTappedViewController: UIViewController {
         wordBtn.selectedTextField.text = ""
         wordBtn.selectedTextField.placeholder = "단어를 입력해주세요"
         // 프린트문을 위한 변환
-        let selectAnswer = (selectedBtn == "word" ? words[wordIndex].word : words[wordIndex].meaning)
-        print("\(selectAnswer) == \(wordIndex) == \(answer)")
+//        let selectAnswer = (selectedBtn == "word" ? words[wordIndex - 1].word : words[wordIndex - 1].meaning)
+//        print("\(selectAnswer) == \(wordIndex) == \(answer)")
         print(testCheck)
     }
 
@@ -102,14 +102,15 @@ class TestBtnTappedViewController: UIViewController {
 
     func testEndFunc(check: [Bool], answers: [Word]) {
         // alert창 찍어내기
+        print(wrongInput)
         var testpass = 0
         for i in check {
             if i == true {
                 testpass += 1
             }
         }
-
-        let alert = UIAlertController(title: "시험 종료", message: "총문제: \(check.count)\n맞춘문제:\(testpass)", preferredStyle: .alert)
+        let totalQuestions = (words.count < 10 ? words.count : 10)
+        let alert = UIAlertController(title: "시험 종료", message: "총문제: \(totalQuestions)\n맞춘문제:\(testpass)", preferredStyle: .alert)
 
         let okAction = UIAlertAction(title: "틀린 문제 확인", style: .default) { _ in
             // 일단 그냥 정답, 오답 나열
@@ -130,6 +131,7 @@ class TestBtnTappedViewController: UIViewController {
             resultSheet.addAction(okAction)
             self.present(resultSheet, animated: true, completion: nil)
         }
+        wordIndex = 0
         let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         alert.addAction(okAction)
         alert.addAction(cancelAction)
