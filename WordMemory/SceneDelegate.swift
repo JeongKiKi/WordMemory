@@ -8,29 +8,33 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        //화면전환을 위해 추가
+        // 화면전환을 위해 추가
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let mainVC = UINavigationController(rootViewController: MainViewController())
         let listVC = UINavigationController(rootViewController: ListViewController())
         let testVC = UINavigationController(rootViewController: TestViewController())
         let tabBar = UITabBarController()
-        tabBar.setViewControllers([mainVC,listVC,testVC], animated: true)
-        
+        tabBar.setViewControllers([mainVC, listVC, testVC], animated: true)
+
+        let searchImage = UIImage(systemName: "magnifyingglass.circle")
+        let wordImage = UIImage(systemName: "book")
+        let testImage = UIImage(systemName: "pencil")
+
         if let item = tabBar.tabBar.items {
             item[0].title = "검색"
+            item[0].image = searchImage
             item[1].title = "단어장"
+            item[1].image = wordImage
             item[2].title = "시험"
+            item[2].image = testImage
         }
         window?.rootViewController = tabBar
         window?.makeKeyAndVisible()
     }
-
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
@@ -59,7 +63,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
-

@@ -66,7 +66,6 @@
 				CA45C796F6C9D3B54D5F2A06 /* Pods-WordMemory.debug.xcconfig */,
 				57486BD4CCB6C13319CD64C9 /* Pods-WordMemory.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -447,6 +446,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5X8MR892Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WordMemory/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -476,6 +476,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G5X8MR892Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WordMemory/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
