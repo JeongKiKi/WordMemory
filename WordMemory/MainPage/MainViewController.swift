@@ -71,6 +71,7 @@ class MainViewController: UIViewController {
 }
 
 extension String {
+    //한글인지 판단하는 함수 추가 (한글이면 true 아니면 false)
     func containsKorean() -> Bool {
         for scalar in unicodeScalars {
             // 한글 유니코드 범위: 0xAC00 ~ 0xD7A3
