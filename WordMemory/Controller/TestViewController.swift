@@ -28,14 +28,16 @@ class TestViewController: UIViewController {
     @objc func wordButtonTapped() {
         print("단어 맞추기 버튼이 눌렸습니다.")
         let resultViewController = TestBtnTappedViewController()
-        resultViewController.selectedBtn = "word"
+        let testModel = TestModel()
+        testModel.selectedBtn = "word"
         navigationController?.pushViewController(resultViewController, animated: true)
     }
 
     // 뜻 맞추기 버튼이 눌렸을 때 실행되는 함수
     @objc func meaningButtonTapped() {
         let resultViewController = TestBtnTappedViewController()
-        resultViewController.selectedBtn = "meaning"
+        let testModel = TestModel()
+        testModel.selectedBtn = "meaning"
         navigationController?.pushViewController(resultViewController, animated: true)
     }
 

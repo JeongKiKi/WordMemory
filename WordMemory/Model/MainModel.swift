@@ -1,51 +1,17 @@
 //
-//  ViewController.swift
+//  MainFunc.swift
 //  WordMemory
 //
-//  Created by 정기현 on 2024/04/09.
+//  Created by 정기현 on 2024/05/16.
 //
 
+import Foundation
 import MLKitTranslate
-import UIKit
-class MainViewController: UIViewController {
-    let mainView = MainView()
+
+class MainModel {
     var koreanEnglishTranslator: Translator?
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationItem.title = "검색"
-        mainView.searchButton.addTarget(self, action: #selector(MainViewController.searchButtonTapped), for: .touchUpInside)
-    }
-
-    // 화면클릭시 키보드 내려감
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
-
-    override func loadView() {
-        super.loadView()
-        view.addSubview(mainView)
-        mainView.snp.makeConstraints {
-            $0.top.equalTo(self.view)
-            $0.leading.bottom.trailing.equalToSuperview()
-        }
-    }
-
-    @objc func searchButtonTapped() {
-        guard let text = mainView.inputWord.text else { return }
-        if text.containsKorean() {
-            changeLanguageKoreanToEnglish()
-        } else {
-            changeLanguageEnglishToKorean()
-        }
-
-        koreanEnglishTranslator?.translate(text) { translatedText, error in
-            guard error == nil, let translatedText = translatedText else { return }
-            print("Translated text:", translatedText)
-            self.mainView.outputWord.text = translatedText
-        }
-    }
-
-    func changeLanguageKoreanToEnglish() {
+    // 구글번역 언어 설정 한국어 -> 영어
+    private func changeLanguageKoreanToEnglish() {
         koreanEnglishTranslator = Translator.translator(options: TranslatorOptions(sourceLanguage: .korean, targetLanguage: .english))
         let conditions = ModelDownloadConditions(
             allowsCellularAccess: false, // 셀룰러 허용 여부
@@ -57,7 +23,8 @@ class MainViewController: UIViewController {
         }
     }
 
-    func changeLanguageEnglishToKorean() {
+    // 구글번역 언어 설정 영어 -> 한국어
+    private func changeLanguageEnglishToKorean() {
         koreanEnglishTranslator = Translator.translator(options: TranslatorOptions(sourceLanguage: .english, targetLanguage: .korean))
         let conditions = ModelDownloadConditions(
             allowsCellularAccess: false, // 셀룰러 허용 여부
@@ -68,10 +35,24 @@ class MainViewController: UIViewController {
             print("언어 모델 다운로드 완료")
         }
     }
+
+    // 언어 구별(한글인지 영어인지) -> 언어모델 다운
+    func languageClassiFication(text: String, completion: @escaping (String) -> Void){
+        if text.containsKorean() {
+            changeLanguageKoreanToEnglish()
+        } else {
+            changeLanguageEnglishToKorean()
+        }
+        koreanEnglishTranslator?.translate(text) { translatedText, error in
+            guard error == nil, let translatedText = translatedText else { return }
+            print("Translated text:", translatedText)
+            completion(translatedText)
+        }
+    }
 }
 
 extension String {
-    //한글인지 판단하는 함수 추가 (한글이면 true 아니면 false)
+    // 한글인지 판단하는 함수 추가 (한글이면 true 아니면 false)
     func containsKorean() -> Bool {
         for scalar in unicodeScalars {
             // 한글 유니코드 범위: 0xAC00 ~ 0xD7A3
