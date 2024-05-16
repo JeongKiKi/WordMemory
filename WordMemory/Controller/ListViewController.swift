@@ -22,7 +22,6 @@ class ListViewController: UIViewController {
     lazy var tableView: UITableView = {
         let table = UITableView()
         view.addSubview(table)
-
         return table
     }()
 
@@ -36,17 +35,15 @@ class ListViewController: UIViewController {
     @objc func addButtonTapped() {
         // alert창 찍어내기
         let alert = UIAlertController(title: "단어 추가", message: "추가하고싶은 단어를 추가해주세요", preferredStyle: .alert)
-
-        // alert창 속 텍스트 필드 추가하기 1 (아이디 필드)
+        // alert창 속 텍스트 필드 추가하기 1
         alert.addTextField { newWord in
             newWord.placeholder = "영단어 입력"
         }
-
-        // alert창 속 텍스트 필드 추가하기 2 (비밀번호 필드)
+        // alert창 속 텍스트 필드 추가하기 2
         alert.addTextField { newMeaning in
             newMeaning.placeholder = "의미 입력"
         }
-
+        // 확인버튼 누르면 단어 저장
         let okAction = UIAlertAction(title: "확인", style: .default) { _ in
             if let addWord = alert.textFields?.first, let addMeaning = alert.textFields?.last {
                 if let addNewWord = addWord.text, let addNewMeaning = addMeaning.text {

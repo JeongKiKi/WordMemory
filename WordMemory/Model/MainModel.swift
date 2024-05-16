@@ -8,7 +8,7 @@
 import Foundation
 import MLKitTranslate
 
-class MainFunc {
+class MainModel {
     var koreanEnglishTranslator: Translator?
     // 구글번역 언어 설정 한국어 -> 영어
     private func changeLanguageKoreanToEnglish() {

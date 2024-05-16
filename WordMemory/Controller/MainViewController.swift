@@ -8,7 +8,7 @@
 import MLKitTranslate
 import UIKit
 class MainViewController: UIViewController {
-    let mainFunc = MainFunc()
+    let mainFunc = MainModel()
     let mainView = MainView()
     
     var koreanEnglishTranslator: Translator?

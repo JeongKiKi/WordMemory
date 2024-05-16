@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E2967E6CA8D04A5F5FBAC13 /* Pods_WordMemory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C186E5346FD5E9E67227B2A /* Pods_WordMemory.framework */; };
-		68D2D9602BF623CA009E04FA /* MainFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2D95F2BF623CA009E04FA /* MainFunc.swift */; };
+		68D2D9602BF623CA009E04FA /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2D95F2BF623CA009E04FA /* MainModel.swift */; };
+		68D2D9622BF64903009E04FA /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D2D9612BF64903009E04FA /* TestModel.swift */; };
 		68F8FC1D2BC5190E007B3191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC1C2BC5190E007B3191 /* AppDelegate.swift */; };
 		68F8FC1F2BC5190E007B3191 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC1E2BC5190E007B3191 /* SceneDelegate.swift */; };
 		68F8FC212BC5190E007B3191 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F8FC202BC5190E007B3191 /* MainViewController.swift */; };
@@ -29,7 +30,8 @@
 /* Begin PBXFileReference section */
 		4C186E5346FD5E9E67227B2A /* Pods_WordMemory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordMemory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57486BD4CCB6C13319CD64C9 /* Pods-WordMemory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordMemory.release.xcconfig"; path = "Target Support Files/Pods-WordMemory/Pods-WordMemory.release.xcconfig"; sourceTree = "<group>"; };
-		68D2D95F2BF623CA009E04FA /* MainFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFunc.swift; sourceTree = "<group>"; };
+		68D2D95F2BF623CA009E04FA /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		68D2D9612BF64903009E04FA /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		68F8FC192BC5190D007B3191 /* WordMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F8FC1C2BC5190E007B3191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68F8FC1E2BC5190E007B3191 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				68F8FC3E2BC84F39007B3191 /* DummyData.swift */,
-				68D2D95F2BF623CA009E04FA /* MainFunc.swift */,
+				68D2D95F2BF623CA009E04FA /* MainModel.swift */,
+				68D2D9612BF64903009E04FA /* TestModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,7 +296,8 @@
 				68F8FC3F2BC84F39007B3191 /* DummyData.swift in Sources */,
 				68F8FC452BCE6F09007B3191 /* TestView.swift in Sources */,
 				68F8FC3D2BC7FC6E007B3191 /* ListTableViewCell.swift in Sources */,
-				68D2D9602BF623CA009E04FA /* MainFunc.swift in Sources */,
+				68D2D9622BF64903009E04FA /* TestModel.swift in Sources */,
+				68D2D9602BF623CA009E04FA /* MainModel.swift in Sources */,
 				68F8FC1F2BC5190E007B3191 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
