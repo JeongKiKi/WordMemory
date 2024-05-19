@@ -52,10 +52,10 @@ GoogleMLKit를 사용해 보기위해 단어장 어플을 만들어 보고자 �
 ### 앱 시연영상
 - [WordMemory](https://www.youtube.com/watch?v=3U3NDsthJQ0)
 ### 앱 캡쳐본
-<img src="https://github.com/JeongKiKi/WordMemory/assets/125369115/eb6edbed-9cf9-49c2-9af1-5ea8d965a73a" width="150" height="300"/>
-<img src="https://github.com/JeongKiKi/WordMemory/assets/125369115/4692aa3b-5245-4a8b-b618-25c9a3a4b158" width="150" height="300"/>
-<img src="https://github.com/JeongKiKi/WordMemory/assets/125369115/eca4bb45-72db-4fc3-b753-e2823574cff5" width="150" height="300"/>
-<img src="https://github.com/JeongKiKi/WordMemory/assets/125369115/6d7701b4-a8bf-4b95-bd62-8eed87531399" width="150" height="300"/>
-<img src="https://github.com/JeongKiKi/WordMemory/assets/125369115/45091bb3-426d-45ce-85f6-444c23e688d5" width="150" height="300"/>
-<img src="https://github.com/JeongKiKi/WordMemory/assets/125369115/ee1d6776-c844-48d1-9c85-cdb0ff7fbe9c" width="150" height="300"/>
+<img src="https://github.com/JeongKiKi/WordMemory/assets/125369115/eb6edbed-9cf9-49c2-9af1-5ea8d965a73a" width="100" height="200"/>
+<img src="https://github.com/JeongKiKi/WordMemory/assets/125369115/4692aa3b-5245-4a8b-b618-25c9a3a4b158" width="100" height="200"/>
+<img src="https://github.com/JeongKiKi/WordMemory/assets/125369115/eca4bb45-72db-4fc3-b753-e2823574cff5" width="100" height="200"/>
+<img src="https://github.com/JeongKiKi/WordMemory/assets/125369115/6d7701b4-a8bf-4b95-bd62-8eed87531399" width="100" height="200"/>
+<img src="https://github.com/JeongKiKi/WordMemory/assets/125369115/45091bb3-426d-45ce-85f6-444c23e688d5" width="100" height="200"/>
+<img src="https://github.com/JeongKiKi/WordMemory/assets/125369115/ee1d6776-c844-48d1-9c85-cdb0ff7fbe9c" width="100" height="200"/>
 
